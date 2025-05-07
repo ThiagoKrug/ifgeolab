@@ -1,0 +1,153 @@
+nav.nav-center ul {
+  text-align: center;
+}
+
+nav ul a:hover {
+  color: #d1d1d1;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+nav ul a.active {
+  text-decoration: underline;
+}
+
+.li a.active {
+  color: #000;
+}
+
+.li a {
+  color: #fff;
+  border-right: solid 1px grey;
+}
+
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+
+nav.nav-center ul li a {
+  display: inline-block;
+}
+
+.nav_color {
+  background-color: #3A5A40;
+}
+
+.nav_color2 {
+  background-color: #588157;
+  height: 32px;
+  line-height: 28px
+}
+
+.perfil {
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-container {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  height: 70%;
+}
+
+.perfil-container img {
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #25412B;
+  border-radius: 100%;
+}
+
+.perfil-container a {
+  color: #fff;
+  /* Cor do texto */
+  text-decoration: none;
+}
+
+.col .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+.ifftopo {
+  width: 175px;
+  height: 94px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: 'Merriweather', serif;
+}
+
+.toggle-button::before {
+  content: '\f185';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 19px;
+  height: 19px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  color: #000;
+}
+
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 2.3733333333rem 0 1.424rem 0;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+#editor-container {
+  height: 200px;
+}
+
+.questionario .card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.questionario .card-content {
+  text-align: center;
+}
+
+.questionario .card-action a {
+  display: block;
+  text-align: center;
+  color: #0288d1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.questionario .card {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.image,
+.image1 {
+  width: 250px;
+  transition: transform 0.3s;
+  position: absolute;
+  transform: translateY(-60px);
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}

@@ -1,0 +1,282 @@
+main {
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.vertical-line {
+    height: 550px;
+    margin-right: 20px;
+}
+
+.vertical-line.light {
+    border-left: 2px solid #25412B;
+}
+
+.vertical-line.dark {
+    border-left: 2px solid #a5d16b;
+}
+
+.section-content {
+    flex: 1;
+}
+
+h4 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+h6 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h6.light {
+    color: #607D3B;
+}
+
+h6.dark {
+    color: #a5d16b
+}
+
+hr.divider {
+    width: 60%;
+    margin-left: 0;
+    height: 2px;
+    border: none;
+    opacity: 0;
+    animation: slideInDivider 1s forwards;
+}
+
+@keyframes slideInDivider {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+hr.divider.light {
+    background-color: #25412B;
+}
+
+hr.divider.dark {
+    background-color: #a5d16b;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem 0 0 1rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-with-caption {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.image-with-caption:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: font-size 0.3s ease-in-out;
+}
+
+.image-container:hover .caption {
+    font-size: 1.75rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h4,
+h6 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animação para a linha vertical */
+.vertical-line {
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Adicionando animação para o conteúdo da seção */
+.section-content {
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .image-container {
+        width: 100%;
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h4 {
+        font-size: 1.2rem;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    h6 {
+        font-size: 0.7rem;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .image-container {
+        width: 100%;
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+}
+
+/* Customizando o popup */
+.swal2-popup.custom-popup {
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    /* Altura mínima para o alerta */
+}
+
+/* Estilo da imagem do usuário que ficará na parte superior */
+.swal2-image.custom-image {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do título */
+.swal2-title.custom-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo do conteúdo */
+.swal2-content.custom-content {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Customizando o botão OK */
+.swal2-confirm.custom-button {
+    background-color: #3a5a40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    /* Garantir que o botão fique no final */
+}
+
+/* Customizando a imagem do logo no footer */
+.swal2-popup.custom-popup .custom-footer-image {
+    text-align: center;
+    margin-top: auto;
+    /* Garante que a imagem fique no final */
+}
+
+/* Estilo da imagem do logo no footer */
+.swal2-popup.custom-popup .custom-footer-image img {
+    width: 100px;
+    /* Largura do logo */
+    height: auto;
+    /* Mantém a proporção */
+}

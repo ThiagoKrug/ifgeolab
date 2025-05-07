@@ -1,0 +1,65 @@
+:root {
+    --pr-color: #fff;
+    --second-color: #0a0a0a;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+}
+
+.card {
+    background-color: #3A5A40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+/* Model-viewer responsivo */
+.card__model {
+    height: 300px; /* Altura padrão */
+    object-fit: contain;
+    border-bottom: 2px solid var(--second-color);
+    transition: height 0.3s ease-in-out;
+}
+
+/* Títulos e espaçamentos */
+.card-title {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: var(--pr-color);
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustes para telas pequenas */
+@media only screen and (max-width: 768px) {
+    .card__model {
+        height: 200px; /* Reduz altura para telas menores */
+    }
+
+    .card-title {
+        font-size: 1.5em; /* Ajusta tamanho do texto */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card__model {
+        height: 150px; /* Altura menor para smartphones */
+    }
+
+    .card-title {
+        font-size: 1.2em; /* Texto proporcionalmente menor */
+    }
+}
+
+/* Alinhamento do botão "Gerar PDF" */
+.gerarpdf {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
